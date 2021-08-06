@@ -1,0 +1,43 @@
+{
+  "name": "coffeecode/uploader",
+  "description": "It is a easy PHP upload manager for images, files and media in your application",
+  "keywords": [
+    "CoffeeCode",
+    "UpInside",
+    "upload",
+    "image upload",
+    "file upload",
+    "media upload"
+  ],
+  "homepage": "http://www.upinside.com.br",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Robson V. Leite",
+      "email": "cursos@upinside.com.br",
+      "role": "Developer"
+    },
+    {
+      "name": "Tiago Chini",
+      "email": "tiago.chini@hotmail.com",
+      "role": "collaborator"
+    }
+  ],
+  "require": {
+<<<<<<< HEAD
+    "php": ">=7.2",
+    "ext-gd": "*",
+    "ext-mbstring": "*",
+    "ext-exif": "*"
+=======
+    "php": "^7.1",
+    "ext-gd": "^7.1",
+    "ext-mbstring": "^7.1"
+>>>>>>> 7de010e53e6c2059a02563df32edb53c805e113c
+  },
+  "autoload": {
+    "psr-4": {
+      "CoffeeCode\\Uploader\\": "src"
+    }
+  }
+}
