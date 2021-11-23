@@ -19,6 +19,7 @@ class Web extends Controller
      */
     public function __construct()
     {
+        //redirect("/ops/manutencao");
         parent::__construct(__DIR__."/../../themes/".CONF_VIEW_THEME."/");
     }
 
@@ -70,7 +71,7 @@ class Web extends Controller
             theme("/assets/images/share.jpg")
         );
 
-        $pager = new Pager(url("/blog/page"));
+        $pager = new Pager(url("/blog/page/"));
         $pager->pager(100, 10, ($data['page'] ?? 1));
         echo $this->view->render("blog",[
             "head" => $head,
