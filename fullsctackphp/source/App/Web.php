@@ -60,7 +60,7 @@ class Web extends Controller
 
     /**
      * SITE BLOG
-     * @param array|null $data
+     * @param array|null $data ok
      */
     public function blog(?array $data):void
     {
@@ -73,7 +73,7 @@ class Web extends Controller
 
         $pager = new Pager(url("/blog/page/"));
         $pager->pager(100, 10, ($data['page'] ?? 1));
-        
+
         echo $this->view->render("blog",[
             "head" => $head,
             "paginator" => $pager->render()
