@@ -82,7 +82,6 @@ class Post extends Model
 
         /** Post Creste */
 
-
         $this->data = $this->findById($postId)->data();
         return true;
     }

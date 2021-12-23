@@ -14,7 +14,7 @@ $session = new Session();
 $route = new Router(url(), ":");
 $route->namespace("Source\App");
 
-/*
+/**
  * WEB ROUTES
  */
 $route->group(null);
@@ -49,14 +49,14 @@ $route->get("/obrigado/{email}", "Web:success");
 $route->group(null);
 $route->get("/termos", "Web:terms");
 
-/*
+/**
  * APP
  */
 $route->group("/app");
 $route->get("/", "App:home");
 $route->get("/sair", "App:logout");
 
-/*
+/**
  * ERROR ROUTES
  */
 $route->group("/ops");

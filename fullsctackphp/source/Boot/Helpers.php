@@ -319,7 +319,7 @@ function flash(): ?string
 {
     $session = new \Source\Core\Session();
     if ($flash = $session->flash()) {
-        echo $flash;
+        return $flash;
     }
     return null;
 }

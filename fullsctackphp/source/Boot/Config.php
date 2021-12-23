@@ -10,8 +10,8 @@ define("CONF_DB_NAME", "fullstackphp");
 /**
  * PROJECT URLs
  */
-define("CONF_URL_BASE", "http://localhost/course-php/fullsctackphp");
-define("CONF_URL_TEST", "http://localhost/course-php/fullsctackphp");
+define("CONF_URL_BASE", "https://www.cafecontrol.com.br");
+define("CONF_URL_TEST", "https://www.localhost/fsphp");
 define("CONF_URL_ADMIN", "/admin");
 
 /**
@@ -95,7 +95,7 @@ define("CONF_IMAGE_QUALITY", ["jpg" => 75, "png" => 5]);
 define("CONF_MAIL_HOST", "smtp.sendgrid.net");
 define("CONF_MAIL_PORT", "587");
 define("CONF_MAIL_USER", "apikey");
-define("CONF_MAIL_PASS", "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");
+define("CONF_MAIL_PASS", "****************************");
 define("CONF_MAIL_SENDER", ["name" => "Robson V. Leite", "address" => "cursos@upinside.com.br"]);
 define("CONF_MAIL_SUPPORT", "cursos@upinside.com.br");
 define("CONF_MAIL_OPTION_LANG", "br");
