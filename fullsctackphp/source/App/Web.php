@@ -4,6 +4,7 @@ namespace Source\App;
 
 use Source\Core\Controller;
 use Source\Models\Auth;
+use Source\Models\Category;
 use Source\Models\Faq\Question;
 use Source\Models\Post;
 use Source\Models\User;
@@ -21,6 +22,7 @@ class Web extends Controller
     public function __construct()
     {
         parent::__construct(__DIR__ . "/../../themes/" . CONF_VIEW_THEME . "/");
+        
     }
 
     /**
@@ -90,6 +92,19 @@ class Web extends Controller
             "blog" => $blog->limit($pager->limit())->offset($pager->offset())->fetch(true),
             "paginator" => $pager->render()
         ]);
+    }
+
+    public function blogCategory(array $data):void
+    {
+        $categoryUri = filter_var($data["category"], FILTER_SANITIZE_STRIPPED);
+        $category= (new Category())->findByUri($categoryUri);
+
+        if(!$category){
+            redirect("/blog");
+        }
+
+        $blogCategory = (new Post())->find("category =:c", "c={$category->id}");
+        var_dump($blogCategory);
     }
 
     /**
